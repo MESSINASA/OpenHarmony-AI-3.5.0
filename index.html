@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>启鸿 AI助手</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 在body开始处添加介绍动画容器 -->
+    <div class="intro-overlay" id="introOverlay">
+        <div class="tech-background">
+            <div class="grid-line"></div>
+            <div class="particles"></div>
+        </div>
+        <div class="intro-content">
+            <div class="harmony-logo">
+                <div class="logo-circle"></div>
+                <div class="logo-scan"></div>
+                <span class="logo-text">启鸿AI 3.0</span>
+                <div class="logo-ring"></div>
+                <div class="logo-ring-2"></div>
+                <div class="logo-ring-3"></div>
+                <div class="logo-particles"></div>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="feature-icon">⚡</i>
+                    </div>
+                    <div class="feature-content">
+                        <span class="feature-text">HarmonyOS NEXT 动画系统</span>
+                        <div class="feature-progress"></div>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="feature-icon">🚀</i>
+                    </div>
+                    <div class="feature-content">
+                        <span class="feature-text">本地快速响应技术</span>
+                        <div class="feature-progress"></div>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="feature-icon">🖼️</i>
+                    </div>
+                    <div class="feature-content">
+                        <span class="feature-text">智能图像分析</span>
+                        <div class="feature-progress"></div>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-wrapper">
+                        <i class="feature-icon">🤖</i>
+                    </div>
+                    <div class="feature-content">
+                        <span class="feature-text">双引擎智能切换</span>
+                        <div class="feature-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="chat-header">
+            <h1>启鸿 AI助手</h1>
+            <!-- <div class="api-info">当前模式：<span id="currentMode">自动选择</span></div> -->
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <!-- 欢迎消息 -->
+                <div class="message ai">
+                    <div class="message-content">
+                        您好！我是启鸿，一个智能AI助手。我可以：
+                        1. 回答问题和对话
+                        2. 分析图片
+                        3. 编程和数学计算
+                        请问有什么可以帮您？
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <div class="file-upload">
+                    <label for="imageUpload" class="upload-btn">
+                        <span class="upload-icon">📎</span>
+                    </label>
+                    <input type="file" id="imageUpload" accept="image/*" multiple>
+                </div>
+                <textarea id="userInput" placeholder="请输入您的问题..."></textarea>
+                <button id="sendButton">发送</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- 在页面加载完成后显示更新介绍 -->
+    <script>
+    document.addEventListener('DOMContentLoaded', showUpdateIntro);
+    </script>
+</body>
+</html> 
